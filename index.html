@@ -8,7 +8,6 @@
     <title>Futuristic MASH Game</title>
     <link href="style.css" rel="stylesheet">
     <link href="normalize.css" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   </head>
   <!-- HEAD SECTION ENDS -->
 
@@ -16,37 +15,35 @@
   <body>
     <h1>Futuristic MASH</h1>
     <p class="description">Fill in the blanks and your future in the next century will be foretold.</p>
-    <div class="col-lg-6 mx-auto">
-      <form action="" method="post" id="mash" class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="Which futuristic city will you call home?" aria-label="Text input with dropdown button">
-        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Option 1</a></li>
-          <li><a class="dropdown-item" href="#">Option 2</a></li>
-          <li><a class="dropdown-item" href="#">Option 3</a></li>
-          <li><a class="dropdown-item" href="#">Option 4</a></li>
-        </ul>
-        <input type="text" class="form-control" placeholder="Your future profession in the 22nd century?" aria-label="Text input with dropdown button">
-        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Option 1</a></li>
-          <li><a class="dropdown-item" href="#">Option 2</a></li>
-          <li><a class="dropdown-item" href="#">Option 3</a></li>
-          <li><a class="dropdown-item" href="#">Option 4</a></li>
-        </ul>
-        <input type="text" class="form-control" placeholder="What's your futuristic robotic pet?" aria-label="Text input with dropdown button">
-        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Option 1</a></li>
-          <li><a class="dropdown-item" href="#">Option 2</a></li>
-          <li><a class="dropdown-item" href="#">Option 3</a></li>
-          <li><a class="dropdown-item" href="#">Option 4</a></li>
-        </ul>
-        <button type="submit" class="btn btn-primary">Tell my fortune</button>
-      </form> 
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <form action="" method="post" id="mash">
+      <div id="answers" class="hide">
+        <p>In the year 2125, you will reside in <span id="answer_1"></span> with a robotic <span id="answer_3"></span> as you are a skilled <span id="answer_2"></span> who owns a flying <span id="home"></span>.</p>
+      </div>
+      <div class="bucket">
+        <div class="choice-bucket">
+          <h4 class="highlight">Which futuristic city will you call home?</h4>
+          <label for="answer_1_1">Option 1</label><input name="answer_1[]" id="answer_1_1">
+          <label for="answer_1_2">Option 2</label><input name="answer_1[]" id="answer_1_2">
+          <label for="answer_1_3">Option 3</label><input name="answer_1[]" id="answer_1_3">
+          <label for="answer_1_4">Option 4</label><input name="answer_1[]" id="answer_1_4">
+        </div>
+        <div class="choice-bucket">
+          <h4 class="highlight">Your future profession in the 22nd century?</h4>
+          <label for="answer_2_1">Option 1</label><input name="answer_2[]" id="answer_2_1">
+          <label for="answer_2_2">Option 2</label><input name="answer_2[]" id="answer_2_2">
+          <label for="answer_2_3">Option 3</label><input name="answer_2[]" id="answer_2_3">
+          <label for="answer_2_4">Option 4</label><input name="answer_2[]" id="answer_2_4">
+        </div>
+        <div class="choice-bucket">
+          <h4 class="highlight">What's your futuristic robotic pet?</h4>
+          <label for="answer_3_1">Option 1</label><input name="answer_3[]" id="answer_3_1">
+          <label for="answer_3_2">Option 2</label><input name="answer_3[]" id="answer_3_2">
+          <label for="answer_3_3">Option 3</label><input name="answer_3[]" id="answer_3_3">
+          <label for="answer_3_4">Option 4</label><input name="answer_3[]" id="answer_3_4">
+        </div>
+      </div>
+      <button type="submit" class="button-submit">Tell my fortune</button>
+    </form>  
     <script src="script.js"></script>
   </body>
 </html>
